@@ -1,0 +1,991 @@
+/*  - ----- -- - - -- - - - - -- - - -- - -
+
+        Mis estilos Chemary Web
+
+*/
+/*  variables */
+:root {
+  --naranja: #fe4918;
+  /*   --verde: rgb(123, 190, 48); */
+    --verde: #60a043;
+}
+/* ESTILOS GLOBALES */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap');
+/*font-family: 'Oswald', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+@font-face {
+    font-family: nature;
+    src: url(The_Naturel.ttf);
+  }
+html
+{
+    box-sizing: border-box;    
+    margin:0px;
+    padding: 0px;
+    
+}
+
+*,*:before , *:after
+{
+    box-sizing: inherit;
+}
+body
+{
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+/* Globales */
+.seccion{
+    padding:30px 0;
+}
+.seccion p
+{
+    font-size: 1.2;
+    text-align: justify;
+    text-indent: 2rem;
+}
+h2.separador
+{
+    font-family: 'Oswald', sans-serif;
+    font-size:2.4em;
+    text-transform: uppercase;
+    text-align: center;
+}
+h2.separador::after
+{
+    content:'';
+    margin:0 auto;
+    background-image: url(../img/separador2.png);
+    height: 40px;
+    width: 260px;
+    display: block;
+}
+h3
+{
+    font-size:1.8em;
+    color:var(--verde);
+    font-family: 'PT Sans', sans-serif;
+    margin:0;
+}
+
+.titulo
+{
+    font-family: 'Oswald', sans-serif;
+    font-size:2.4em;
+   padding:2rem;
+    color: white;
+    text-align: center;
+    
+}
+
+/* Clase marco para contenedores */
+.marco
+{
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 8px;
+    margin: 1rem auto !important;
+    padding: 1rem;
+
+}
+
+
+.flexible_dos
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.flexible_dos > div
+{
+    width: 85%;
+    margin: 1rem;
+}
+.flexible_dos img
+{
+    width: 100%;
+}
+
+
+.button
+{
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--verde);
+    padding: 10px 40px;
+    color:white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all .3 ease;
+    border: 2px solid var(--verde);
+}
+.button.hollow,
+.button.hollow:hover
+{
+    background-color: white;
+    color: var(--verde);
+    border: 2px solid var(--verde);
+}
+.button.transparente
+{
+    background-color: transparent;
+    border: 2px solid white;
+}
+.float-right
+{
+    float:right;
+}
+ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.contenedor
+{
+    width:95%;
+    margin: 0 auto;
+}
+.button:hover
+{
+    background-color: var(--verde);
+    
+}
+
+
+
+
+/*     HEADER */
+
+
+.site-header div.hero
+{
+    
+    /* background-image: url(../img/fachada.jpg); */
+    background-image: url(../img/salon_cabecera.jpg);
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+     display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+/* header para las habitaciones */
+.header-casa div.hero
+{
+    
+    background-image: url(../img/comedor_cocina.jpg);
+    height: 70vh;
+    background-position: bottom;
+    background-size: cover;
+     display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+/* header para las habitaciones */
+.header-habitaciones div.hero
+{
+    
+    background-image: url(../img/cascadas.jpg);
+    height: 70vh;
+    background-position: bottom;
+    background-size: cover;
+     display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+.header-contacto div.hero
+{
+    
+    background-image: url(../img/iglesia.jpg);
+    height: 70vh;
+    background-position: top center;
+    background-size: cover;
+     display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+/* -- Encabezado para entorno ---*/
+.header-entorno div.hero
+{
+    
+    background-image: url(../img/cascadas2.jpg);
+    height: 70vh;
+    background-position: top center;
+    background-size: cover;
+     display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+nav.redes-sociales
+{
+    text-align: center;
+}
+nav.redes-sociales a
+{
+    color: white;
+    font-size: 2em;
+    margin-right: 20px;
+}
+nav.redes-sociales a:last-child
+{
+    margin-right: 0px;
+}
+div.informacion-evento, div.informacion-evento-movil
+{
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    padding:2rem;
+    margin-left:15px;
+    margin-right:15px;
+    margin-bottom: 30px;  
+}
+div.informacion-evento
+{
+    display: none;
+}
+div.informacion-evento-movil
+{
+    margin-top: 1rem;
+}
+
+div.informacion-evento p, div.informacion-evento-movil p
+{
+    margin:0;
+    display: inline;
+    font-size:20px;
+    text-transform: uppercase;
+}
+div.informacion-evento p i, div.informacion-evento-movil p i
+{
+    color:var(--verde);
+    font-size:2rem;
+}
+p.fecha
+{
+    float:left;
+    font-size: 3vw;
+   
+}
+p.ciudad
+{
+    float: right;
+    text-align: right;
+    font-size: 3vw;
+        
+}
+
+h1.nombre-sitio{
+    font-size: 4vw;
+    font-family: 'PT Sans', sans-serif;
+}
+p.slogan span
+{
+    font-weight: bold;
+}
+p.slogan
+{
+    text-transform: none!important;
+    font-size: 3vw;
+}
+div.barra
+{
+   
+    background-color: rgba(255, 255,255, 1); 
+    padding:20px 0;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+}
+div.barra_baja
+{
+   background-color: #fff; 
+    background-color: rgba(0, 0,0, .9); 
+    padding:20px 0;
+   
+}
+div.logo 
+{
+    width: 60%;
+    float: left;
+}
+div.logo img
+{
+    /* width: 100%; */
+    max-height: 50px;
+}
+
+/*navegacion principal*/
+nav.navegacion-principal
+{
+    display: none;
+}
+nav.navegacion-principal a
+{
+    font-family: nature;
+    color:var(--verde);
+    text-decoration: none;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    transition: all .6s ease;
+    display: block;
+    width:100%;
+    text-align: center;
+    margin-top:10px;
+    
+}
+nav.navegacion-principal .inicial
+{
+    margin-top:60px !important;
+}
+    nav.navegacion-principal a:hover
+    {
+        text-decoration: underline;
+    }
+  
+/*Menu movil*/
+div.menu-movil
+{
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top:12px;
+}
+div.menu-movil span
+{
+    height: 8px;
+    margin-bottom: 6px;
+    background-color: forestgreen;
+    display: block;
+}
+
+
+
+
+
+
+/*** boton ver habitaciones con parallax ***/
+.parallax::before
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;   
+    background-attachment: fixed;
+}
+div.newsletter
+{
+    position: relative;
+    height: auto;
+    
+}
+div.newsletter::before
+{
+    background-image: url(../img/comedor8.JPG);
+    content: '';
+}
+
+div.newsletter .contenido
+{
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+   
+}
+div.newsletter .contenido .fondo-negro
+{
+     background-color: rgba(0,0,0, .7);
+    display:inline-block;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+}
+div.newsletter .contenido p
+{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+div.newsletter .contenido h3
+{
+    color:white;
+    text-transform: uppercase;
+    font-size: 4vw;
+    font-family: 'PT Sans', sans-serif;
+    
+}
+
+/* Sección ofertas en index y en precios. */
+div#ofertas
+{
+    width: 90%;
+    border: 1px solid #777;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #777;
+    padding: 1rem;
+    transition: 2s all ease;
+   
+    
+}
+
+/* sección servicios en el index de la web */
+section.servicios
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+section.servicios > div
+{
+    
+        width: 45%;
+        margin: 1rem;
+    
+    border: 1px solid #777;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #777;
+    padding: 1rem;
+    transition: 2s all ease;
+    
+}
+section.servicios div figure img
+{
+    width: 100%;
+}
+section.servicios figcaption
+{
+    text-align: center;
+    margin-top: 5px;
+}
+/* ------------ Nuestra Casa ------------  */
+section.nuestra_casa h2
+{
+    font-family: 'Oswald', sans-serif;
+    font-size:2.4em;
+   padding:2rem;
+    color: white;
+    text-align: center;
+    background-color: burlywood;
+}
+section.cocina, section.comedor
+{
+    background-color: black;
+   
+    display:flex;
+    flex-direction: column;
+
+}
+section.cocina > div, section.comedor > div
+{
+    width:100%;
+    color: white;
+}
+section.cocina div img, section.comedor div img
+{
+     max-width: 100%;
+  height: auto;
+}
+section.cocina div.derecha-cocina, section.comedor div.derecha-comedor
+{
+    padding: 1rem;
+    
+}
+/* -  Página de las habitaciones.   ----  */
+section.habitaciones
+{
+    
+    /* border:1px solid #ccc; */
+    border-radius: 10px;
+}
+
+
+h2.primera
+{
+    background-color: forestgreen;;
+}
+h2.segunda
+{
+    background-color: #804000;
+}
+
+section.habitaciones p
+{
+    max-width: 900px;
+    margin: 1rem auto;
+    text-align: center;
+    
+}
+
+div.galeria-habitacion
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.galeria-habitacion > div
+{
+    border:1px solid #999;
+    padding: .5rem;
+    width: 90%;
+    border-radius: 5px;
+    margin-top:1rem;
+    box-shadow: 3px 3px 3px #ccc;
+}
+div.galeria-habitacion img
+{
+    width: 100%;
+}
+
+
+		
+
+
+    /* -- Página de contacto --- */
+
+section.datos
+{
+    display: flex;
+    flex-direction: column;
+}
+section.datos > div
+{
+    width: 80%;
+    margin: 1rem auto;
+    border: 1px solid #999;
+    background:#F9F9F9;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #ccc;
+    padding: 1rem;
+}
+section.datos div.derecha img
+{
+    width: 100%;
+}
+
+section.mapa
+{
+    
+    height: 450px;
+
+    
+}
+
+
+/* -------------- P R E C I O S ----------- */
+/*  Tabla de precios */
+ul.lista-precios
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul.lista-precios > li /*Al primer li de la lista de precios*/
+{
+   padding: 10px; 
+    width: 75%;
+}
+div.tabla-precio
+{
+    border:1px solid #e1e1e1;
+    background-color: #fff;
+    padding: 30px 0;
+    text-align: center;  
+    transition: all .5s ease;
+}
+div.tabla-precio:hover
+{
+    transform: scale(1.1);
+    border: 1px solid var(--verde);
+    box-shadow: 0px 0px 50px #666;
+}
+div.tabla-precio ul li
+{
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color:#868686;
+    line-height: 26px;
+}
+
+
+div.tabla-precio h3
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: 16px;
+    
+}
+div.tabla-precio p.numero
+{
+    color: black;
+    margin:20px 0;
+}
+
+
+
+
+
+/* Para el formulario*/
+
+
+.container {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+}
+
+#contact h3 {
+	color: var(--verde);
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+    text-align: center;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:var(--verde);
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:#09C;
+
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+
+
+
+/* -------------- E N T O R N O  ----------- */
+section.panoramica-entorno
+{
+    
+    height: 400px;
+    background-image: url(../img/panoramica.jpg);
+    background-size: cover;
+    
+}
+
+.entorno{
+    
+    
+    background-color: #f1f1f1;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.entorno div
+{
+    padding: 2rem;
+    /* background-color: black; */
+}
+.entorno div img{
+    width: 100%;
+    background-color: white;
+    
+    border-radius: 5%;
+    /* padding:.6rem; 
+    border: 1px solid black;*/
+    box-shadow: 3px 3px 3px #999;
+}
+.entorno div h2, h2.titulo_entorno
+{
+    text-align: left;
+    color:white;
+    background-color: var(--verde);
+    padding: .5rem;
+    border-radius: 5px;
+}
+/* --------------------Qué Ver -------------*/
+h3.ver
+{
+    padding: 1rem 0px;
+    border-bottom: 1px solid black;
+}
+.flexible_quever
+{
+    border: 1px solid #777;
+    margin: 1rem;
+}
+
+/* ----------------------------------------------
+- + -                                       - + -
+- + -                                       - + -
+- + -            Media querys               - + -
+- + -                                       - + -
+- + -                                       - + -
+-----------------------------------------------*/
+/* Resolución mayor de 768 */
+@media only screen and (min-width:810px)
+{
+    .site-header div.hero
+{
+    
+    /* background-image: url(../img/fachada.jpg); */
+    background-image: url(../img/salon_cabecera.jpg);
+    }
+    div.informacion-evento
+    {
+    display: block;
+    }
+    div.informacion-evento-movil
+    {
+    display: none;
+    }
+    .flexible_dos
+    {  
+        flex-direction: row;
+    }
+        .flexible_dos > div
+        {
+            width: 45%;
+          
+        }
+
+    
+    
+    div.logo 
+    {
+        width:15%;
+        
+    }
+    nav.navegacion-principal
+    {
+        display: block;
+        width:85%;
+        float:right;
+        text-align: right;
+    }
+    nav.navegacion-principal a
+    {
+        margin-right: 10px;
+        width:auto;
+        padding:10px;
+        display: inline-block;
+        
+        transition: all .3s ease;
+    }
+    nav.navegacion-principal .inicial
+    {
+    margin-top:10px !important;
+    }
+   
+    div.menu-movil 
+    {    
+        display:none;
+    }
+    
+    
+}
+@media only screen and (min-width:768px)
+{
+    .contenedor
+    {
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+    div.contenido-header
+    {
+        padding-top:10px;
+    }
+    div.informacion-evento
+    {
+        width: 70%;
+        margin: 0 auto;
+    }
+    h1.nombre-sitio{
+       font-size: 4.9vw;
+       margin:0;
+    }
+    div#ofertas
+{
+    width: 60%;
+    }
+    
+    div.programa-evento
+    {
+    width:70%;
+    
+    }
+    nav.menu-programa 
+    {
+        display: table;
+    }
+    nav.menu-programa a
+    {
+        display: table-cell;
+    }
+    
+    section.servicios
+    {
+        flex-direction: row;
+        
+    }
+    section.servicios > div
+    {
+        width: 45%;
+        margin: 1rem;
+    }
+    
+    
+    /* contador de numeros*/
+    ul.resumen-evento li
+    {
+        width: 25%;
+    }
+    ul.lista-precios
+    {
+        flex-direction: row;
+    }
+    ul.lista-precios > li /*Al primer li de la lista de precios*/
+    {
+        
+        width: 33.3%;
+    }
+    div.testimonial
+    {
+        float:left;
+        width: 33.3%;
+    
+    }
+    /** Cuenta regresiva **/
+    div.cuenta-regresiva ul li
+    {
+        width:25%;
+        float:left;
+    }
+    footer .contenedor > div
+    {
+        width:33.3%;
+        float:left;
+    }
+
+    /* ------para nuestra casa --------*/
+    
+    section.cocina, section.comedor
+    {
+        flex-direction: row;
+
+     }
+    section.cocina > div, section.comedor > div
+    {
+        width:50%;
+    }
+    
+    /* para las habitaciones */
+    div.galeria-habitacion
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    div.galeria-habitacion > div
+    {
+       
+        margin: 10px;
+        width: 30%;
+    }
+
+    section.datos
+    {
+    
+        flex-direction: row;
+    }
+    section.datos > div
+    {
+        width: 40%;
+    }
+    
+    
+   
+}
